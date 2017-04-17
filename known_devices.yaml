@@ -1,0 +1,48 @@
+
+chromecastaudio:
+  hide_if_away: false
+  mac: 54:60:09:E7:DF:3E
+  name: Chromecast-Audio
+  picture:
+  track: false
+  vendor: Google, Inc.
+
+sunesmacbook:
+  hide_if_away: false
+  mac: 34:36:3B:D4:C9:E8
+  name: Sunes-Macbook
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+gwb072bf276353:
+  hide_if_away: false
+  mac: B0:72:BF:27:63:53
+  name: GW-B072BF276353
+  picture:
+  track: true
+  vendor: unknown
+
+netteiphone5:
+  hide_if_away: false
+  mac: A4:F1:E8:01:D1:50
+  name: Nette
+  picture:
+  track: true
+  vendor: unknown
+
+android6b2a1ac15cccdc5b:
+  hide_if_away: false
+  mac: A8:81:95:84:2C:FA
+  name: Samsung tablet
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+androidbefdc63812c0d6be:
+  hide_if_away: false
+  mac: 40:B8:37:B3:E8:51
+  name: Sune
+  picture:
+  track: true
+  vendor: Sony Mobile Communications AB
