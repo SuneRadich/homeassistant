@@ -33,6 +33,7 @@ homeassistant:
         switch.logic_soft_zhc5010_wall_switch_switch_5_0_5:
             friendly_name: Knap 4
 
+#https://community.home-assistant.io/t/setting-scenes-on-z-wave-wall-switch-zhc5010/3847/10
 # automation:
 #trigger:
     #platform: state
@@ -53,7 +54,7 @@ config:
 
 http:
   # Uncomment this to add a password (recommended!)
-  # api_password: PASSWORD
+  # api_password: !secret http_password
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
 
@@ -84,6 +85,35 @@ tts:
     platform: google
 
 group: !include groups.yaml
+
+mqtt:
+    broker: 192.168.1.140
+    port: 1883
+    username: sykokaj
+    password: mefdef17
+
+
+device_tracker:
+  - platform: linksys_ap
+    host: 192.168.1.1
+    username: admin
+    password: 65kzat7vjt
+#    verify_ssl: true
+    scan_interval: 6
+#    consider_home: 12
+
+#
+#device_tracker:
+#    - platform: nmap_tracker
+#      hosts: 192.168.1.1/24
+#      exclude:
+#          - 192.168.1.1     #router
+#          - 192.168.1.110   #Sonos Play:3
+#          - 192.168.1.112   #Pi wifi
+#          - 192.168.1.120   #Sonos Playbar
+#          - 192.168.1.124   #Sonos Play:5
+#          - 192.168.1.140   #Pi
+#          - 192.168.1.148   #Ukendt
 
 zwave:
     usb_path: /dev/ttyAMA0
