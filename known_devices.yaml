@@ -18,9 +18,9 @@ sunesmacbook:
 gwb072bf276353:
   hide_if_away: false
   mac: B0:72:BF:27:63:53
-  name: GW-B072BF276353
+  name: IKEA Tradfri gateway
   picture:
-  track: true
+  track: false
   vendor: unknown
 
 netteiphone5:
