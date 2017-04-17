@@ -12,7 +12,6 @@ lib
 deps
 tts
 secrets.yaml
-known_devices.yaml
 *.conf
 plex.conf
 phue.conf
