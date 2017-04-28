@@ -33,16 +33,6 @@ homeassistant:
         switch.logic_soft_zhc5010_wall_switch_switch_5_0_5:
             friendly_name: Knap 4
 
-#https://community.home-assistant.io/t/setting-scenes-on-z-wave-wall-switch-zhc5010/3847/10
-# automation:
-#trigger:
-    #platform: state
-    #entity_id: switch.logic_soft_zhc5010_wall_switch_switch_4_0_3
-    #to: 'on'
-  #action:
-    #service: light.turn_on
-    #entity_id: light.room001
-
 # Show links to resources in log and frontend
 introduction:
 
@@ -54,7 +44,7 @@ config:
 
 http:
   # Uncomment this to add a password (recommended!)
-  # api_password: !secret http_password
+  api_password: !secret http_password
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
 
@@ -91,16 +81,19 @@ mqtt:
     port: 1883
     username: sykokaj
     password: mefdef17
+#    certificate: auto
 
+automation: !include automation.yaml
 
 device_tracker:
-  - platform: linksys_ap
-    host: 192.168.1.1
-    username: admin
-    password: !secret linksys_password
-#    verify_ssl: true
-    scan_interval: 6
-#    consider_home: 12
+    - platform: linksys_ap
+      host: 192.168.1.1
+      username: admin
+      password: !secret linksys_password
+      scan_interval: 6
+#    - platform: owntracks
+#      max_gps_accuracy: 500
+
 
 #
 #device_tracker:
@@ -115,13 +108,16 @@ device_tracker:
 #          - 192.168.1.140   #Pi
 #          - 192.168.1.148   #Ukendt
 
+# tradfri:
+#     host: 192.168.1.149
+#     api_key: N7abTNn16i2ly1Uw
+
 zwave:
     usb_path: /dev/ttyAMA0
     config_path: /home/homeassistant/.homeassistant/config
 #  autoheal: true
 #  debug: false
-#  device_config:
-#    climate.danfoss_z_thermostat_014g0013_heating_1_3_1:
-#      friendly_name: "Danfoss Stuen"
-#    climate.danfoss_z_thermostat_014g0013_heating_1_4_1:
-#      friendly_name: "Danfoss Entre"
+
+#media_player:
+#    - platform: philips_js
+#      host: 192.168.1.117

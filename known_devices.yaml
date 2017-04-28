@@ -27,7 +27,7 @@ netteiphone5:
   hide_if_away: false
   mac: A4:F1:E8:01:D1:50
   name: Nette
-  picture:
+  picture: https://lh3.googleusercontent.com/wq9s-NImDhO4M5ErqH-6FtAksHFjFu2_f5zixs8GaHxRISALd8P3uDeEiSaMglh0Pqz2RBKpdkUhGsmk-flabrerrNVj=s221-p-k-lf-no
   track: true
   vendor: unknown
 
@@ -43,6 +43,6 @@ androidbefdc63812c0d6be:
   hide_if_away: false
   mac: 40:B8:37:B3:E8:51
   name: Sune
-  picture:
+  picture: https://lh3.googleusercontent.com/Qtnl4JlXjsJthjYO14CFH6UOLY48auPYe-WHO7XcAxlNV1BrTpaOz0dAzQyZ0mFcARbVj6o7cXIVlzataSM9foKN5YSu=s221-p-k-lf-no
   track: true
   vendor: Sony Mobile Communications AB

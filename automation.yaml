@@ -1,0 +1,40 @@
+- alias: Natsænkning
+  trigger:
+      platform: time
+      after: '00:30'
+  action:
+      - service: climate.set_temperature
+        data:
+            # Stuen
+            entity_id: climate.danfoss_z_thermostat_014g0013_heating_1_3_1
+            temperature: 21
+      - service: climate.set_temperature
+        data:
+            # Entreen
+            entity_id: climate.danfoss_z_thermostat_014g0013_heating_1_4_1
+            temperature: 20
+- alias: Dagtemperatur
+  trigger:
+      platform: time
+      after: '05:45'
+  action:
+      - service: climate.set_temperature
+        data:
+            # Stuen
+            entity_id: climate.danfoss_z_thermostat_014g0013_heating_1_3_1
+            temperature: 25
+      - service: climate.set_temperature
+        data:
+            # Entreen
+            entity_id: climate.danfoss_z_thermostat_014g0013_heating_1_4_1
+            temperature: 21
+- alias: Switch test on
+  initial_state: true
+  trigger:
+      platform: state
+      entity_id: switch.logic_soft_zhc5010_wall_switch_switch_5_0_3
+  action:
+      service: light.toggle
+      entity_id: light.ikea_stjerne
+
+#https://community.home-assistant.io/t/setting-scenes-on-z-wave-wall-switch-zhc5010/3847/10
